@@ -10,20 +10,17 @@
  |	if( object. method( value ) == true ) do something; 
  **/
 
-// Object General
 
+// Object General
 var Obj = {
 
 // Setting base url	example: http://www.domain.com/
+// Use Ajax Base url
 	base         	:  '',
 
-// General Validations
-
-/*
- |	Valid a Integer Number
- |	number - Number to validate 	
- */
-	validInteger	: 	function( number ){
+// Integer Number
+// Example: 123
+	integer	: 	function( number ){
 		
 		// Regular Expresion
 		if ( !/^([0-9])*$/.test( number ) ){
@@ -38,11 +35,9 @@ var Obj = {
 	
 	},
 
-/*
- |	Valid a Float Number	
- |  number - Number to validate
- */
-	validFloat	:	function( number ){
+// Floar number 
+// Example: 12.12
+	float	:	function( number ){
 		 
 		 // Regular Expresion
 		 if ( !/^([0-9])*[.]?[0-9]*$/.test( number ) ){
@@ -57,11 +52,9 @@ var Obj = {
 	
 	},
 
-/* 
- |	Number Format
- |	number - Number to format 
- */
-	numberFormat	:	function( number ){
+// Number Format
+// Example: 1000 -> 1.000
+	format	:	function( number ){
 		
 		var pos;
 		val=number.split(",").join(""); // remove existing commas if present.
@@ -84,13 +77,11 @@ var Obj = {
 	
 	},	
 
-/*
- |	Valid a Email format
- |	email - Email to validate
- */ 
- 	validEmail	:	function( email ){
+// email  
+// example: mail@mail.com
+ 	email	:	function( email ){
 		
-		// Regular Expresion
+// Regular Expresion
 		if ( /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/.test( email ) ){
 		
 			return true; 
@@ -103,13 +94,13 @@ var Obj = {
 	
 	},
 
-/* 
- | Valid URL
- | url - Url to validate
- */
-	validUrl	:	function( url ){
+// url 
+// example 
+// http://www.domain.com/
+// ftp.domain.com
+	url	:	function( url ){
 		
-		// Regular Expresion				
+// Regular Expresion				
 		if ( /^(http|ftp)(s)?:\/\/\w+(\.\w+)*(-\w+)?\.([a-z]{2,3}|info|mobi|aero|asia|name)(:\d{2,5})?(\/)?((\/).+)?$/.test( url ) ){
 		
 			return true;	
@@ -123,10 +114,7 @@ var Obj = {
 	
 	},
 
-/*
- |	Valid empty value
- |	value - Validate if the value is empty 
- */
+// empty
 	empty	:	function( value ){
 		
 		if( value.length == 0 ){
@@ -142,21 +130,37 @@ var Obj = {
 	
 	},
 
-// General Functions	
-
-/* 
- |	Delete Record
- |	url - Url to locate if user want delete that record
- */
-    delete	:	function( url ){
+// Alfanumeric
+// Example 123ABC
+	alfanumeric	: 	function( data ){
 		
-		if( confirm( "You want delete this record?" ) ){
-			
-			window.location = this.base+url;
+// Regular Expresion
+		if ( !/^([a-zA-Z0-9])*$/.test( data ) ){
+	 		
+			return false;
+ 
+		}else{
+		
+			return true;
 		
 		}
-		
-	}
 	
+	},
 
+// Alfabetic
+// Example ABC	
+	alfabetic	: 	function( data ){
+		
+// Regular Expresion
+		if ( !/^([a-zA-Z])*$/.test( data ) ){
+	 		
+			return false;
+ 
+		}else{
+		
+			return true;
+		
+		}
+	
+	}
 }
