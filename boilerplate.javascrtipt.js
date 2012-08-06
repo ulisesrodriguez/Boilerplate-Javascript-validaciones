@@ -16,23 +16,31 @@
 
 
 /**
-   Object General Functions
- 
- 	Usage
+    Object Functions Validations
+    
+	Usage
  	
- 	var object = new Obj();
+ 	Include file in head tags
  	
- 	if( object. method( value ) == true ) do something; 
+	<script type="text/javascript" src="js/boilerplate.javascript.js"></script>
+			
+	<script type="text/javascript">
+	
+ 	var validation = new Validation();
+ 	
+ 	if( validation. method( value ) == true ) do something; 
  
  	or 
  	
-	if( Obj.method ( value ) == true ) do something;
+	if( Validation.method( value ) == true ) do something;
+	
+	</script>
 	
  **/
 
 
 // Object General
-var Obj = {
+var Validation = {
 
 // Setting base url	example: http://www.domain.com/
 // Use Ajax Base url
