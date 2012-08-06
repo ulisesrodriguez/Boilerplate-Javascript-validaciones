@@ -1,13 +1,33 @@
 // JavaScript Document
+
+/*
+
+  Author		Ulises Rodríguez
+  Site:			http://www.ulisesrodriguez.com	
+  Twitter:		https://twitter.com/#!/isc_ulises
+  Facebook:		http://www.facebook.com/ISC.Ulises
+  Github:		https://github.com/ulisesrodriguez
+  Email:		ing.ulisesrodriguez@gmail.com
+  Skype:		systemonlinesoftware
+  Location:		Guadalajara Jalisco Mexíco
+
+  	
+*/
+
+
 /**
- | Object General Functions
- | Developer by Ulises Rodriguez http://www.ulisesrodriguez.com	
- |
- |	Usage
- |	
- |	var object = new Obj();
- |	
- |	if( object. method( value ) == true ) do something; 
+   Object General Functions
+ 
+ 	Usage
+ 	
+ 	var object = new Obj();
+ 	
+ 	if( object. method( value ) == true ) do something; 
+ 
+ 	or 
+ 	
+	if( Obj.method ( value ) == true ) do something;
+	
  **/
 
 
