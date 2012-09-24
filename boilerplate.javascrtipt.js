@@ -159,11 +159,11 @@ var Validation = {
 	},
 
 // Alfanumeric
-// Example 123ABC
+// Example 123ABCÑÄ
 	alfanumeric	: 	function( data ){
 		
 // Regular Expresion
-		if ( !/^([a-zA-Z0-9])*$/.test( data ) ){
+		if ( !/^[a-zA-Z0-9 áéíóúñ\.]+[a-zA-Z0-9 áéíóúñ\.]+$/.test( data ) ){
 	 		
 			return false;
  
@@ -190,5 +190,22 @@ var Validation = {
 		
 		}
 	
-	}
+	},
+	
+// Phone
+// Example 233-234-231 or 123123213
+	phone	: 	function( phone ){
+						
+// Regular Expresion
+		if ( !/^[0-9\-]+[0-9\-]+$/.test( data ) ){
+	 		
+			return false;
+ 
+		}else{
+		
+			return true;
+		
+		}
+	
+	},
 }
